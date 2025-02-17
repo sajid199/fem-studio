@@ -1187,3 +1187,194 @@ a:focus {
   bottom: -40px;
   right: 0;
 }
+
+/* Product Card Styles */
+.product-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card .img-box {
+  height: 250px;
+  overflow: hidden;
+}
+
+.product-card .img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-card .detail-box {
+  padding: 15px;
+  text-align: center;
+}
+
+.product-card .product-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.product-card .price {
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.product-card .whatsapp-share {
+  color: #25D366;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.product-card .whatsapp-share:hover {
+  color: #128C7E;
+}
+
+/* Services Section Styles */
+.services_section {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+}
+
+.service-card {
+  text-align: center;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-icon {
+  font-size: 48px;
+  color: #ff69b4;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Collection Section Styles */
+.collection_section {
+  background-color: #fff0f5;
+  padding: 80px 0;
+}
+
+.collection-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.collection-card img {
+  transition: transform 0.3s ease;
+}
+
+.collection-card:hover img {
+  transform: scale(1.1);
+}
+
+.collection-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7));
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.collection-card:hover .collection-overlay {
+  height: 100%;
+}
+
+.collection-overlay h3 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* Footer Section Styles */
+.footer_section {
+  background-color: #333;
+  color: #fff;
+  padding: 60px 0 20px;
+}
+
+.footer-about .footer-logo {
+  max-height: 80px;
+  margin-bottom: 20px;
+}
+
+.footer-links h4, .footer-contact h4 {
+  color: #ff69b4;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #ff69b4;
+}
+
+.footer-contact .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-contact .social-icon {
+  color: #fff;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.footer-contact .social-icon:hover {
+  color: #ff69b4;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  margin-top: 30px;
+}
