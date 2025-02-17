@@ -1054,4 +1054,136 @@ a:focus {
   background-color: rgba(255, 182, 193, 0.1);
   border-radius: 4px;
 }
-/*# sourceMappingURL=style.css.map */
+
+.intro_section {
+  background: linear-gradient(135deg, rgba(255, 240, 245, 0.9) 0%, rgba(255, 182, 193, 0.4) 100%);
+  position: relative;
+  overflow: hidden;
+  color: #333;
+}
+
+.intro_section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), 
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><g fill-opacity="0.03"><path fill="%23ff1493" d="M50 0a50 50 0 1 0 0 100A50 50 0 1 0 50 0z"/></g></svg>');
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.intro_section .section-header {
+  margin-bottom: 40px;
+}
+
+.intro_section .pre-title {
+  display: block;
+  color: #ff1493;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.intro_section .section-title {
+  color: #333;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.intro_section .section-divider {
+  width: 100px;
+  height: 4px;
+  background-color: #ff1493;
+  margin: 20px auto;
+}
+
+.intro_section .lead {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.intro_section .expertise-grid {
+  margin-top: 40px;
+}
+
+.intro_section .expertise-item {
+  text-align: center;
+  padding: 25px;
+  transition: transform 0.3s ease;
+}
+
+.intro_section .expertise-item:hover {
+  transform: translateY(-10px);
+}
+
+.intro_section .expertise-icon {
+  width: 90px;
+  height: 90px;
+  background-color: rgba(255, 20, 147, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: all 0.3s ease;
+}
+
+.intro_section .expertise-icon i {
+  font-size: 40px;
+  color: #ff1493;
+}
+
+.intro_section .expertise-title {
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.intro_section .expertise-description {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.intro_section .signature-quote {
+  margin-top: 50px;
+}
+
+.intro_section .signature-quote blockquote {
+  position: relative;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 50px;
+  text-align: center;
+}
+
+.intro_section .signature-quote blockquote::before,
+.intro_section .signature-quote blockquote::after {
+  content: '"';
+  position: absolute;
+  font-size: 4rem;
+  color: #ff1493;
+  opacity: 0.3;
+}
+
+.intro_section .signature-quote blockquote::before {
+  top: -20px;
+  left: 0;
+}
+
+.intro_section .signature-quote blockquote::after {
+  bottom: -40px;
+  right: 0;
+}
