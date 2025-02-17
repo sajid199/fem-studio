@@ -60,7 +60,69 @@ padding-left: 0;
   }
 }
 
-@media (max-width: 576px) {}
+@media (max-width: 576px) {
+  /* Improve typography for small screens */
+  body {
+    font-size: 14px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  /* Adjust header and navigation */
+  .navbar-brand {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .brand-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .brand-text h5 {
+    font-size: 0.9rem;
+  }
+
+  /* Improve expertise and services grid */
+  .expertise-grid .expertise-item,
+  .services_section .service-card {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .expertise-grid .expertise-icon,
+  .services_section .service-icon {
+    margin-bottom: 10px;
+  }
+
+  /* Adjust collection and intro sections */
+  .intro_section,
+  .collection_section {
+    padding: 30px 0;
+  }
+
+  .intro_section .lead {
+    font-size: 0.9rem;
+  }
+
+  .signature-quote blockquote {
+    font-size: 1rem;
+  }
+
+  /* Responsive images */
+  .bg-box img,
+  .collection-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
 
 @media (max-width: 480px) {}
 
@@ -73,6 +135,20 @@ padding-left: 0;
   .offer_section .box .img-box {
     margin-right: 0;
     margin-bottom: 15px;
+  }
+
+  /* Further adjustments for extremely small screens */
+  body {
+    font-size: 12px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .expertise-grid .expertise-item,
+  .services_section .service-card {
+    width: 100%;
   }
 }
 
