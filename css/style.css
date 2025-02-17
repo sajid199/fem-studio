@@ -116,8 +116,17 @@ a:focus {
 .bg-box img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
+  object-position: center;
+  min-height: 500px;
+  max-height: 800px;
+}
+
+@media (max-width: 991px) {
+  .hero_area .bg-box img {
+    min-height: 300px;
+    max-height: 500px;
+  }
 }
 
 .sub_page .hero_area {
@@ -1125,20 +1134,28 @@ a:focus {
 }
 
 .intro_section .expertise-icon {
-  width: 90px;
-  height: 90px;
-  background-color: rgba(255, 20, 147, 0.1);
-  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 20, 147, 0.2);
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 20px;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(255, 20, 147, 0.2);
+  border: 2px solid rgba(255, 20, 147, 0.3);
+}
+
+.intro_section .expertise-icon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(255, 20, 147, 0.3);
 }
 
 .intro_section .expertise-icon i {
-  font-size: 40px;
+  font-size: 48px;
   color: #ff1493;
+  text-shadow: 1px 1px 2px rgba(255, 20, 147, 0.3);
 }
 
 .intro_section .expertise-title {
@@ -1231,7 +1248,7 @@ a:focus {
 }
 
 .product-card .whatsapp-share {
-  color: #25D366;
+  color: pink;
   font-size: 24px;
   transition: color 0.3s ease;
 }
@@ -1261,7 +1278,7 @@ a:focus {
 
 .service-icon {
   font-size: 48px;
-  color: #ff69b4;
+  color: pink;
   margin-bottom: 20px;
 }
 
@@ -1358,7 +1375,7 @@ a:focus {
 }
 
 .footer-links h4, .footer-contact h4 {
-  color: #ff69b4;
+  color: pink;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
@@ -1379,7 +1396,7 @@ a:focus {
 }
 
 .footer-links ul li a:hover {
-  color: #ff69b4;
+  color: pink;
 }
 
 .footer-contact .social-links {
@@ -1395,7 +1412,7 @@ a:focus {
 }
 
 .footer-contact .social-icon:hover {
-  color: #ff69b4;
+  color: pink;
 }
 
 .footer-bottom {
@@ -1426,7 +1443,7 @@ a:focus {
   border-radius: 10px;
   padding: 25px;
   margin-bottom: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
 
@@ -1452,7 +1469,7 @@ a:focus {
 
 .choose-us-list i {
   margin-right: 10px;
-  color: #007bff;
+  color: pink;
 }
 
 /* Value Propositions Styles */
@@ -1477,7 +1494,7 @@ a:focus {
 
 .value-proposition-item .value-icon {
   font-size: 3rem;
-  color: #007bff;
+  color: pink;
   margin-bottom: 20px;
   transition: color 0.3s ease;
 }
@@ -1519,7 +1536,7 @@ a:focus {
 
 .offering-detail-card .offering-icon {
   font-size: 3rem;
-  color: #007bff;
+  color: pink;
   margin-bottom: 20px;
   transition: color 0.3s ease;
 }
@@ -1568,7 +1585,7 @@ a:focus {
 
 .unique-offerings-carousel .offering-icon {
   font-size: 3rem;
-  color: #007bff;
+  color: pink;
   margin-bottom: 20px;
   transition: color 0.3s ease;
 }
@@ -1621,7 +1638,7 @@ a:focus {
 }
 
 .service-card .service-icon {
-  color: #ff6f61;
+  color: pink;
   margin-bottom: 20px;
 }
 
@@ -1668,10 +1685,43 @@ a:focus {
 
 .dynamic-services-section .offerings-card h3 i {
   margin-right: 15px;
-  color: #ff6f61;
+  color: pink;
 }
 
 .dynamic-services-section .offerings-card p {
   color: #666;
   line-height: 1.6;
+}
+
+/* Global Font Awesome Icon Color */
+.fas, .fab, .far {
+  color: pink !important;
+}
+
+.intro_section .expertise-icon i {
+  color: pink !important;
+}
+
+.service-icon i {
+  color: pink !important;
+}
+
+.footer-contact .social-icon i {
+  color: pink !important;
+}
+
+.value-proposition-item .value-icon {
+  color: pink !important;
+}
+
+.offering-detail-card .offering-icon {
+  color: pink !important;
+}
+
+.unique-offerings-carousel .offering-icon {
+  color: pink !important;
+}
+
+.service-card .service-icon i {
+  color: pink !important;
 }
