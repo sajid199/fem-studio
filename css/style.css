@@ -1154,7 +1154,7 @@ a:focus {
 
 .intro_section .expertise-icon i {
   font-size: 48px;
-  color: #ff1493;
+  color: #333; /* Darker color for better visibility */
   text-shadow: 1px 1px 2px rgba(255, 20, 147, 0.3);
 }
 
@@ -1494,13 +1494,13 @@ a:focus {
 
 .value-proposition-item .value-icon {
   font-size: 3rem;
-  color: pink;
+  color: #4a4a4a; /* Darker color for better visibility */
   margin-bottom: 20px;
   transition: color 0.3s ease;
 }
 
 .value-proposition-item:hover .value-icon {
-  color: #0056b3;
+  color: #333; /* Even darker shade for icon color */
 }
 
 .value-proposition-item .value-title {
@@ -1536,13 +1536,13 @@ a:focus {
 
 .offering-detail-card .offering-icon {
   font-size: 3rem;
-  color: pink;
+  color: #4a4a4a; /* Darker color for better visibility */
   margin-bottom: 20px;
   transition: color 0.3s ease;
 }
 
 .offering-detail-card:hover .offering-icon {
-  color: #0056b3;
+  color: #333; /* Even darker shade for icon color */
 }
 
 .offering-detail-card .offering-title {
@@ -1585,13 +1585,13 @@ a:focus {
 
 .unique-offerings-carousel .offering-icon {
   font-size: 3rem;
-  color: pink;
+  color: #333; /* Darker color for better visibility */
   margin-bottom: 20px;
   transition: color 0.3s ease;
 }
 
 .unique-offerings-carousel .offering-detail-card:hover .offering-icon {
-  color: #0056b3;
+  color: #333; /* Even darker shade for icon color */
 }
 
 .unique-offerings-carousel .offering-title {
@@ -1699,7 +1699,7 @@ a:focus {
 }
 
 .intro_section .expertise-icon i {
-  color: pink !important;
+  color: #333 !important; /* Darker color for better visibility */
 }
 
 .service-icon i {
@@ -1711,15 +1711,15 @@ a:focus {
 }
 
 .value-proposition-item .value-icon {
-  color: pink !important;
+  color: #4a4a4a !important; /* Darker color for better visibility */
 }
 
 .offering-detail-card .offering-icon {
-  color: pink !important;
+  color: #4a4a4a !important; /* Darker color for better visibility */
 }
 
 .unique-offerings-carousel .offering-icon {
-  color: pink !important;
+  color: #333 !important; /* Darker color for better visibility */
 }
 
 .service-card .service-icon i {

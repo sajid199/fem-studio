@@ -2,7 +2,13 @@
 function getYear() {
     var currentDate = new Date();
     var currentYear = currentDate.getFullYear();
-    document.querySelector("#displayYear").innerHTML = currentYear;
+    var displayYearElement = document.querySelector("#displayYear");
+    
+    if (displayYearElement) {
+        displayYearElement.innerHTML = currentYear;
+    } else {
+        console.warn("Element with ID 'displayYear' not found. Cannot display current year.");
+    }
 }
 
 getYear();

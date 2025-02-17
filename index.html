@@ -221,10 +221,6 @@
             </div>
           </div>
         </div>
-        <div class="text-center mt-4">
-          <p class="lead text-muted">Experience the art of handcrafted elegance with Fem Studio Boutique</p>
-        </div>
-      </div>
     </section>
     <!-- End Unique Offerings Section -->
 
@@ -430,7 +426,7 @@
         </div>
       </div>
       <div class="footer-bottom text-center mt-4">
-        <p>&copy; 2025 FemStudio. All Rights Reserved. Crafted with <i class="fas fa-heart text-danger"></i> by FemStudio Team</p>
+        <p>&copy; <span id="displayYear"></span> FemStudio. All Rights Reserved. Crafted with <i class="fas fa-heart text-danger"></i> by FemStudio Team</p>
       </div>
     </div>
   </footer>
@@ -500,6 +496,14 @@
           }
         }
       });
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const yearElement = document.getElementById('displayYear');
+      const currentYear = new Date().getFullYear();
+      yearElement.textContent = currentYear;
     });
   </script>
 
