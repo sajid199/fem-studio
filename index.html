@@ -146,6 +146,165 @@
     </section>
     <!-- end intro section -->
 
+    <!-- Unique Offerings Section -->
+    <section class="unique-offerings-section layout_padding bg-light">
+      <div class="container">
+        <div class="heading_container text-center mb-5">
+          <h2 class="section-title">What We Offer</h2>
+          <p class="section-subtitle">Crafting Elegance, Defining Your Style</p>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="offerings-card mb-4">
+              <h3><i class="fas fa-check-circle text-primary mr-3"></i>Customized Tailoring</h3>
+              <p>Perfect fit, personalized for you. Our expert tailors ensure every garment is crafted to complement your unique body shape and style preferences.</p>
+            </div>
+            <div class="offerings-card mb-4">
+              <h3><i class="fas fa-check-circle text-primary mr-3"></i>Intricate Embroidery</h3>
+              <p>Beauty in every thread. Our skilled artisans create stunning embroidery that transforms each piece into a work of art.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="offerings-card mb-4">
+              <h3><i class="fas fa-check-circle text-primary mr-3"></i>Bespoke Designs</h3>
+              <p>Unique styles, just the way you envision. We turn your fashion dreams into reality with custom-designed outfits.</p>
+            </div>
+            <div class="offerings-card mb-4">
+              <h3><i class="fas fa-check-circle text-primary mr-3"></i>Quality Craftsmanship</h3>
+              <p>Passion in every stitch. We combine traditional techniques with modern design to create timeless, high-quality garments.</p>
+            </div>
+          </div>
+        </div>
+        <div class="unique-offerings-details mt-5">
+          <div class="container">
+            <div class="heading_container text-center mb-5">
+              <h2 class="section-title">Our Unique Offerings</h2>
+              <p class="section-subtitle">Crafting Elegance, Defining Your Style</p>
+            </div>
+            <div class="unique-offerings-carousel owl-carousel owl-theme">
+              <div class="offering-detail-card">
+                <div class="offering-icon">
+                  <i class="fas fa-ruler-combined"></i>
+                </div>
+                <h4 class="offering-title">Customized Tailoring</h4>
+                <p class="offering-description">
+                  Perfect fit, personalized for you. Our expert tailors ensure every garment is crafted to complement your unique body shape and style preferences.
+                </p>
+              </div>
+              <div class="offering-detail-card">
+                <div class="offering-icon">
+                  <i class="fas fa-paint-brush"></i>
+                </div>
+                <h4 class="offering-title">Intricate Embroidery</h4>
+                <p class="offering-description">
+                  Beauty in every thread. Our skilled artisans create stunning embroidery that transforms each piece into a work of art.
+                </p>
+              </div>
+              <div class="offering-detail-card">
+                <div class="offering-icon">
+                  <i class="fas fa-palette"></i>
+                </div>
+                <h4 class="offering-title">Bespoke Designs</h4>
+                <p class="offering-description">
+                  Unique styles, just the way you envision. We turn your fashion dreams into reality with custom-designed outfits.
+                </p>
+              </div>
+              <div class="offering-detail-card">
+                <div class="offering-icon">
+                  <i class="fas fa-hands-helping"></i>
+                </div>
+                <h4 class="offering-title">Quality Craftsmanship</h4>
+                <p class="offering-description">
+                  Passion in every stitch. We combine traditional techniques with modern design to create timeless, high-quality garments.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <p class="lead text-muted">Experience the art of handcrafted elegance with Fem Studio Boutique</p>
+        </div>
+      </div>
+    </section>
+    <!-- End Unique Offerings Section -->
+
+    <!-- Dynamic Services Section -->
+    <section class="unique-offerings-section layout_padding bg-light">
+      <div class="container">
+        <div class="heading_container text-center mb-5">
+          <h2>Our Signature Services</h2>
+          <p>Crafting Elegance, Moment by Moment</p>
+        </div>
+        <div id="services-container" class="row">
+          <!-- Services will be dynamically populated here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Add JavaScript for dynamic service display -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const services = [
+          {
+            title: 'Customized Tailoring',
+            description: 'Perfect fit, personalized for you. Our expert tailors ensure every garment is crafted to complement your unique body shape and style preferences.',
+            icon: 'fa-scissors'
+          },
+          {
+            title: 'Intricate Embroidery',
+            description: 'Beauty in every thread. Our skilled artisans create stunning embroidery that transforms each piece into a work of art.',
+            icon: 'fa-paint-brush'
+          },
+          {
+            title: 'Bespoke Designs',
+            description: 'Unique styles, just the way you envision. We turn your fashion dreams into reality with custom-designed outfits.',
+            icon: 'fa-magic'
+          },
+          {
+            title: 'Quality Craftsmanship',
+            description: 'Passion in every stitch. We combine traditional techniques with modern design to create timeless, high-quality garments.',
+            icon: 'fa-hands-helping'
+          }
+        ];
+
+        const servicesContainer = document.getElementById('services-container');
+
+        function updateServices() {
+          // Clear previous services
+          servicesContainer.innerHTML = '';
+
+          // Select two random unique services
+          const selectedServices = [];
+          while (selectedServices.length < 2) {
+            const randomIndex = Math.floor(Math.random() * services.length);
+            const service = services[randomIndex];
+            if (!selectedServices.includes(service)) {
+              selectedServices.push(service);
+            }
+          }
+
+          // Display selected services
+          selectedServices.forEach(service => {
+            const serviceCard = document.createElement('div');
+            serviceCard.className = 'col-md-6';
+            serviceCard.innerHTML = `
+              <div class="offerings-card mb-4">
+                <h3><i class="fas ${service.icon} text-primary mr-3"></i>${service.title}</h3>
+                <p>${service.description}</p>
+              </div>
+            `;
+            servicesContainer.appendChild(serviceCard);
+          });
+        }
+
+        // Initial update
+        updateServices();
+
+        // Update services every 5 seconds
+        setInterval(updateServices, 5000);
+      });
+    </script>
+
     <!-- Services Section -->
     <section class="services_section layout_padding">
       <div class="container">
@@ -297,6 +456,52 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
   </script>
   <!-- End Google Map -->
+
+  <!-- Custom scripts -->
+  <script>
+    $(document).ready(function() {
+      // Initialize Value Propositions Carousel
+      $('.value-proposition-carousel').owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 2
+          },
+          1000: {
+            items: 3
+          }
+        }
+      });
+      // Initialize Unique Offerings Carousel
+      $('.unique-offerings-carousel').owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        responsive: {
+          0: {
+            items: 1
+          },
+          600: {
+            items: 2
+          },
+          1000: {
+            items: 3
+          }
+        }
+      });
+    });
+  </script>
 
 </body>
 

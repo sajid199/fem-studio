@@ -1403,3 +1403,275 @@ a:focus {
   padding-top: 20px;
   margin-top: 30px;
 }
+
+/* Unique Offerings Section Styles */
+.unique-offerings-section {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+}
+
+.unique-offerings-section .section-title {
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.unique-offerings-section .section-subtitle {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.offerings-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.offerings-card:hover {
+  transform: translateY(-10px);
+}
+
+.offerings-card h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.offerings-card p {
+  color: #666;
+}
+
+.choose-us-list li {
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: 500;
+}
+
+.choose-us-list i {
+  margin-right: 10px;
+  color: #007bff;
+}
+
+/* Value Propositions Styles */
+.unique-value-propositions {
+  padding: 40px 0;
+  background-color: #f9f9f9;
+}
+
+.value-proposition-carousel .value-proposition-item {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px 20px;
+  margin: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.value-proposition-carousel .value-proposition-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.value-proposition-item .value-icon {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.value-proposition-item:hover .value-icon {
+  color: #0056b3;
+}
+
+.value-proposition-item .value-title {
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.value-proposition-item .value-description {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Unique Offerings Details Styles */
+.unique-offerings-details {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+}
+
+.offering-detail-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.offering-detail-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.offering-detail-card .offering-icon {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.offering-detail-card:hover .offering-icon {
+  color: #0056b3;
+}
+
+.offering-detail-card .offering-title {
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.offering-detail-card .offering-description {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Unique Offerings Carousel Styles */
+.unique-offerings-details .section-title {
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.unique-offerings-details .section-subtitle {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.unique-offerings-carousel .offering-detail-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  margin: 15px;
+}
+
+.unique-offerings-carousel .offering-detail-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.unique-offerings-carousel .offering-icon {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.unique-offerings-carousel .offering-detail-card:hover .offering-icon {
+  color: #0056b3;
+}
+
+.unique-offerings-carousel .offering-title {
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.unique-offerings-carousel .offering-description {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Dynamic Services Section Styles */
+.dynamic-services-section {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+.dynamic-services-section .section-title {
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.dynamic-services-section .section-subtitle {
+  color: #666;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.service-card {
+  background-color: white;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+.service-card .service-icon {
+  color: #ff6f61;
+  margin-bottom: 20px;
+}
+
+.service-card .service-title {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.service-card .service-description {
+  color: #666;
+  line-height: 1.6;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dynamic Services Section Styles */
+.dynamic-services-section .offerings-card {
+  background-color: white;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.dynamic-services-section .offerings-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.dynamic-services-section .offerings-card h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.dynamic-services-section .offerings-card h3 i {
+  margin-right: 15px;
+  color: #ff6f61;
+}
+
+.dynamic-services-section .offerings-card p {
+  color: #666;
+  line-height: 1.6;
+}
