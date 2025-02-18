@@ -1725,3 +1725,84 @@ a:focus {
 .service-card .service-icon i {
   color: pink !important;
 }
+
+/* Collection Section Styles */
+.collection_section {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.collection_section .box {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.collection_section .box:hover {
+  transform: scale(1.05);
+}
+
+.collection_section .img-box {
+  height: 300px;
+  overflow: hidden;
+}
+
+.collection_section .img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.collection_section .box:hover .img-box img {
+  transform: scale(1.1);
+}
+
+.collection_section .detail-box {
+  padding: 20px;
+  text-align: center;
+}
+
+.collection_section .detail-box h4 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.collection_section .detail-box p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.collection_section .product-grid {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.collection_section .product-item {
+  text-align: center;
+  width: 45%;
+}
+
+.collection_section .product-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.collection_section .btn-primary {
+  background-color: #ff6f61;
+  border-color: #ff6f61;
+  transition: all 0.3s ease;
+}
+
+.collection_section .btn-primary:hover {
+  background-color: #ff5044;
+  border-color: #ff5044;
+}
