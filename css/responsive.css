@@ -268,4 +268,33 @@ padding-left: 0;
     height: auto;
     margin-bottom: 15px;
   }
+  
+  .tailoring-options .card,
+  .readymade-options .card {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  
+  .tailoring-options .card-body,
+  .readymade-options .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .tailoring-options .card-body > div,
+  .readymade-options .card-body > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .tailoring-options .btn,
+  .readymade-options .btn {
+    margin-top: 10px;
+    align-self: flex-start;
+  }
 }
