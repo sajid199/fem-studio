@@ -298,3 +298,68 @@ padding-left: 0;
     align-self: flex-start;
   }
 }
+
+/* Collection Page Responsive Enhancements */
+@media (max-width: 1200px) {
+  .collection_section .collection-card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .collection_section .scrolling-collection {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .collection_section .scrolling-collection .gallery-item {
+    display: inline-block;
+    width: 250px;
+    margin-right: 15px;
+    vertical-align: top;
+  }
+
+  .collection_section .gallery-item img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .collection_section .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .collection_section .col-12.col-lg-6 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .collection_section .collection-card {
+    width: 100%;
+  }
+
+  .collection_section .gallery-item {
+    margin-bottom: 15px;
+  }
+
+  .collection_section .gallery-item img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .collection_section .scrolling-collection .gallery-item {
+    width: 200px;
+  }
+
+  .collection_section .gallery-item img {
+    height: 180px;
+  }
+
+  .collection_section .collection-card .card-header {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+}

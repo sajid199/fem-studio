@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <!-- Basic -->
@@ -8,415 +8,760 @@
   <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <!-- Site Metas -->
-  <meta name="keywords" content="FemStudio, fashion, modern elegance" />
-  <meta name="description" content="Modern Elegance in Every Stitch" />
+  <meta name="keywords" content="FemStudio, fashion, modern elegance, boutique, women's clothing" />
+  <meta name="description" content="Modern Elegance in Every Stitch - FemStudio Boutique offers premium tailoring and ready-to-wear fashion" />
   <meta name="author" content="FemStudio" />
-  <link rel="shortcut icon" href="images/brandlogo.PNG" type="">
+  <link rel="shortcut icon" href="images/brandlogo.png" type="image/x-icon">
 
-  <title> FemStudio </title>
+  <title>FemStudio Boutique | Modern Elegance in Every Stitch</title>
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  
+  <!-- Owl Carousel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+  
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <!--owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-  <!-- nice select  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
-  <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
-
+  <style>
+    :root {
+      --primary-color: #8b5a2b;
+      --secondary-color: #f8f1e9;
+      --accent-color: #d4a373;
+      --dark-color: #3a2e24;
+      --light-color: #fff9f0;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--light-color);
+      color: var(--dark-color);
+      overflow-x: hidden;
+    }
+    
+    h1, h2, h3, h4, h5 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+    }
+    
+    .hero-section {
+      height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                  url('https://images.unsplash.com/photo-1469334031218-e382a71b716b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+    
+    .navbar {
+      transition: all 0.3s;
+      padding: 20px 0;
+    }
+    
+    .navbar.scrolled {
+      background-color: white !important;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+      padding: 10px 0;
+    }
+    
+    .navbar.scrolled .nav-link {
+      color: var(--dark-color) !important;
+    }
+    
+    .navbar.scrolled .navbar-brand h1 {
+      color: var(--dark-color) !important;
+    }
+    
+    .navbar-brand .logo-img {
+      max-height: 60px;
+      transition: all 0.3s;
+    }
+    
+    .navbar-brand:hover .logo-img {
+      transform: scale(1.05);
+    }
+    
+    .boutique-tag {
+      font-size: 0.6em;
+      vertical-align: top;
+      color: var(--accent-color);
+      font-weight: 400;
+    }
+    
+    .nav-link {
+      position: relative;
+      margin: 0 10px;
+      font-weight: 500;
+    }
+    
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: var(--accent-color);
+      bottom: 0;
+      left: 0;
+      transition: width 0.3s;
+    }
+    
+    .nav-link:hover:after {
+      width: 100%;
+    }
+    
+    .nav-link.active:after {
+      width: 100%;
+    }
+    
+    /* Hero Content */
+    .hero-content {
+      max-width: 700px;
+    }
+    
+    .hero-title {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .hero-subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--accent-color);
+      border-color: var(--accent-color);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    /* Section Styling */
+    .section {
+      padding: 100px 0;
+    }
+    
+    .section-title {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 2.5rem;
+      color: var(--dark-color);
+    }
+    
+    .section-title span {
+      color: var(--primary-color);
+    }
+    
+    .section-title:after {
+      content: '';
+      position: absolute;
+      width: 60%;
+      height: 3px;
+      background: var(--accent-color);
+      bottom: -10px;
+      left: 20%;
+    }
+    
+    .section-subtitle {
+      color: #666;
+      margin-bottom: 50px;
+    }
+    
+    /* About Section */
+    .about-img {
+      border-radius: 15px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    
+    .about-img:hover {
+      transform: scale(1.03);
+    }
+    
+    /* Services Section */
+    .service-card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: all 0.3s;
+      height: 100%;
+      text-align: center;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+    
+    .service-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--secondary-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      color: var(--primary-color);
+      font-size: 30px;
+    }
+    
+    /* Collections Section */
+    .collection-card {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .collection-img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+    
+    .collection-card:hover .collection-img {
+      transform: scale(1.05);
+    }
+    
+    .collection-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+      color: white;
+      padding: 30px;
+      transform: translateY(100%);
+      transition: transform 0.3s;
+    }
+    
+    .collection-card:hover .collection-overlay {
+      transform: translateY(0);
+    }
+    
+    /* Testimonials */
+    .testimonial-card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      margin: 15px;
+    }
+    
+    .testimonial-img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 3px solid var(--secondary-color);
+    }
+    
+    .testimonial-rating {
+      color: var(--accent-color);
+      margin-bottom: 15px;
+    }
+    
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                  url('https://images.unsplash.com/photo-1529139574466-a303027c1d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      text-align: center;
+      padding: 100px 0;
+    }
+    
+    /* Footer */
+    .footer {
+      background: var(--dark-color);
+      color: white;
+      padding: 70px 0 30px;
+    }
+    
+    .footer-logo {
+      max-height: 80px;
+      margin-bottom: 20px;
+    }
+    
+    .footer-links h4, 
+    .footer-contact h4 {
+      color: var(--accent-color);
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    
+    .footer-links h4:after,
+    .footer-contact h4:after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 2px;
+      background: var(--accent-color);
+      bottom: 0;
+      left: 0;
+    }
+    
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+    
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    .footer-links a:hover {
+      color: var(--accent-color);
+    }
+    
+    .footer-contact p {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: flex-start;
+    }
+    
+    .footer-contact i {
+      margin-right: 10px;
+      color: var(--accent-color);
+      margin-top: 3px;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+    
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      background: rgba(255,255,255,0.1);
+      transition: all 0.3s;
+    }
+    
+    .social-icon:hover {
+      transform: translateY(-3px);
+    }
+    
+    .facebook:hover { background: #3b5998; }
+    .instagram:hover { background: #E1306C; }
+    .twitter:hover { background: #1DA1F2; }
+    .pinterest:hover { background: #E60023; }
+    
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+      margin-top: 30px;
+    }
+    
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--primary-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      z-index: 99;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .back-to-top:hover {
+      background: var(--accent-color);
+      transform: translateY(-3px);
+    }
+    
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+      
+      .section {
+        padding: 60px 0;
+      }
+      
+      .collection-img {
+        height: 250px;
+      }
+      
+      .navbar-brand .brand-text h1 {
+        font-size: 1.5rem;
+      }
+      
+      .navbar-brand .brand-text h5 {
+        font-size: 0.8rem;
+      }
+    }
+    
+    /* Animation Classes */
+    .animate-fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 
 <body>
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
 
-  <div class="hero_area">
-    <div class="bg-box">
-      <img src="images/main-1.png"alt="">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="images/brandlogo.png" alt="FemStudio Logo" class="logo-img me-3">
+        <div class="brand-text">
+          <h1 class="mb-0 text-white">FemStudio <span class="boutique-tag">Boutique</span></h1>
+          <h5 class="text-muted mb-0">Modern Elegance in Every Stitch</h5>
+        </div>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="collection.html">Collection</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg custom_nav-container">
-          <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <img src="images/brandlogo.png" alt="FemStudio Logo" class="logo-img mr-3" style="max-height: 50px; object-fit: contain;">
-            <div class="brand-text">
-              <h1 class="mb-0">FemStudio <span class="boutique-tag">Boutique</span></h1>
-              <h5 class="text-muted">Modern Elegance in Every Stitch</h5>
-            </div>
-          </a>
+  </nav>
 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item  active">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="collection.html">Collection</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- end header section -->
-    <!-- slider section -->
-    
-    <!-- end slider section -->
-
-    <!-- intro section -->
-    <section class="intro_section layout_padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="intro-content text-center">
-              <div class="section-header mb-5">
-                <span class="pre-title text-uppercase">Welcome to Fem Studio Boutique</span>
-                <h2 class="section-title">Where Fashion Meets Craftsmanship!</h2>
-                <div class="section-divider"></div>
-              </div>
-              
-              <div class="row justify-content-center">
-                <div class="col-md-10">
-                  <p class="lead text-muted mb-4">
-                    At Fem Studio Boutique, we offer a perfect blend of custom tailoring, ready-to-wear fashion, and an exclusive in-store shopping experience. Whether you're looking for a perfectly tailored outfit or exploring our fashion stores with a wide range of stylish collections, we have something for every occasion.
-                  </p>
-                </div>
-              </div>
-              
-              <div class="expertise-grid row">
-                <div class="col-md-4 expertise-item">
-                  <div class="expertise-icon">
-                    <i class="fa fa-scissors"></i>
-                  </div>
-                  <h4 class="expertise-title">Custom Tailoring</h4>
-                  <p class="expertise-description">
-                    Personalized fits crafted just for you with precision and care.
-                  </p>
-                </div>
-                
-                <div class="col-md-4 expertise-item">
-                  <div class="expertise-icon">
-                    <i class="fas fa-tshirt"></i>
-                  </div>
-                  <h4 class="expertise-title">Ready-to-Wear Collection</h4>
-                  <p class="expertise-description">
-                    Elegant salwar suits, kurtas, and Indian dresses for every style.
-                  </p>
-                </div>
-                
-                <div class="col-md-4 expertise-item">
-                  <div class="expertise-icon">
-                    <i class="fa fa-heart"></i>
-                  </div>
-                  <h4 class="expertise-title">Premium Quality</h4>
-                  <p class="expertise-description">
-                    Handpicked materials and intricate embroidery for timeless elegance.
-                  </p>
-                </div>
-              </div>
-              
-              <div class="signature-quote mt-5">
-                <blockquote>
-                  "Every Stitch, A Statement – Crafted with Passion, Worn with Confidence."
-                </blockquote>
-                <p class="mt-3 text-muted">
-                  Visit Fem Studio Boutique – your destination for style, sophistication, and personalized fashion!
-                </p>
-              </div>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7" data-aos="fade-right">
+          <div class="hero-content">
+            <h1 class="hero-title">Modern Elegance in Every Stitch</h1>
+            <p class="hero-subtitle">Discover our exquisite collection of tailored and ready-to-wear fashion that celebrates your unique style</p>
+            <div class="d-flex gap-3">
+              <a href="collection.html" class="btn btn-primary">Explore Collections</a>
+              <a href="contact.html" class="btn btn-outline-light">Book Consultation</a>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- end intro section -->
+    </div>
+  </section>
 
-    <!-- Unique Offerings Section -->
-    <section class="unique-offerings-section layout_padding bg-light">
-      <div class="container">
-        <div class="heading_container text-center mb-5">
-          <h2 class="section-title">What We Offer</h2>
-          <p class="section-subtitle">Crafting Elegance, Defining Your Style</p>
+  <!-- About Section -->
+  <section class="section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+          <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="About FemStudio" class="img-fluid about-img">
         </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="offerings-card mb-4">
-              <h3><i class="fas fa-check-circle text-primary mr-3"></i>Customized Tailoring</h3>
-              <p>Perfect fit, personalized for you. Our expert tailors ensure every garment is crafted to complement your unique body shape and style preferences.</p>
-            </div>
-            <div class="offerings-card mb-4">
-              <h3><i class="fas fa-check-circle text-primary mr-3"></i>Intricate Embroidery</h3>
-              <p>Beauty in every thread. Our skilled artisans create stunning embroidery that transforms each piece into a work of art.</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="offerings-card mb-4">
-              <h3><i class="fas fa-check-circle text-primary mr-3"></i>Bespoke Designs</h3>
-              <p>Unique styles, just the way you envision. We turn your fashion dreams into reality with custom-designed outfits.</p>
-            </div>
-            <div class="offerings-card mb-4">
-              <h3><i class="fas fa-check-circle text-primary mr-3"></i>Quality Craftsmanship</h3>
-              <p>Passion in every stitch. We combine traditional techniques with modern design to create timeless, high-quality garments.</p>
-            </div>
-          </div>
-        </div>
-        <div class="unique-offerings-details mt-5">
-          <div class="container">
-            <div class="heading_container text-center mb-5">
-              <h2 class="section-title">Our Unique Offerings</h2>
-              <p class="section-subtitle">Crafting Elegance, Defining Your Style</p>
-            </div>
-            <div class="unique-offerings-carousel owl-carousel owl-theme">
-              <div class="offering-detail-card">
-                <div class="offering-icon">
-                  <i class="fas fa-ruler-combined"></i>
+        <div class="col-lg-6" data-aos="fade-left">
+          <h2 class="section-title">About <span>FemStudio</span></h2>
+          <p class="lead">Where Fashion Meets Craftsmanship</p>
+          <p>At FemStudio Boutique, we blend traditional craftsmanship with contemporary designs to create timeless pieces that celebrate femininity. Our passion for detail and commitment to quality ensures every garment tells a story.</p>
+          <div class="row mt-4">
+            <div class="col-md-6 mb-4">
+              <div class="d-flex">
+                <div class="me-3 text-primary">
+                  <i class="fas fa-scissors fa-2x"></i>
                 </div>
-                <h4 class="offering-title">Customized Tailoring</h4>
-                <p class="offering-description">
-                  Perfect fit, personalized for you. Our expert tailors ensure every garment is crafted to complement your unique body shape and style preferences.
-                </p>
+                <div>
+                  <h5>Custom Tailoring</h5>
+                  <p class="mb-0">Perfect fit for your unique body shape</p>
+                </div>
               </div>
-              <div class="offering-detail-card">
-                <div class="offering-icon">
-                  <i class="fas fa-paint-brush"></i>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="d-flex">
+                <div class="me-3 text-primary">
+                  <i class="fas fa-palette fa-2x"></i>
                 </div>
-                <h4 class="offering-title">Intricate Embroidery</h4>
-                <p class="offering-description">
-                  Beauty in every thread. Our skilled artisans create stunning embroidery that transforms each piece into a work of art.
-                </p>
+                <div>
+                  <h5>Bespoke Designs</h5>
+                  <p class="mb-0">Unique creations just for you</p>
+                </div>
               </div>
-              <div class="offering-detail-card">
-                <div class="offering-icon">
-                  <i class="fas fa-palette"></i>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="d-flex">
+                <div class="me-3 text-primary">
+                  <i class="fas fa-gem fa-2x"></i>
                 </div>
-                <h4 class="offering-title">Bespoke Designs</h4>
-                <p class="offering-description">
-                  Unique styles, just the way you envision. We turn your fashion dreams into reality with custom-designed outfits.
-                </p>
+                <div>
+                  <h5>Premium Fabrics</h5>
+                  <p class="mb-0">Only the finest materials</p>
+                </div>
               </div>
-              <div class="offering-detail-card">
-                <div class="offering-icon">
-                  <i class="fas fa-hands-helping"></i>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="d-flex">
+                <div class="me-3 text-primary">
+                  <i class="fas fa-award fa-2x"></i>
                 </div>
-                <h4 class="offering-title">Quality Craftsmanship</h4>
-                <p class="offering-description">
-                  Passion in every stitch. We combine traditional techniques with modern design to create timeless, high-quality garments.
-                </p>
+                <div>
+                  <h5>Expert Craftsmanship</h5>
+                  <p class="mb-0">Years of experience in every stitch</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-    </section>
-    <!-- End Unique Offerings Section -->
-
-    <!-- Dynamic Services Section -->
-    <section class="unique-offerings-section layout_padding bg-light">
-      <div class="container">
-        <div class="heading_container text-center mb-5">
-          <h2>Our Signature Services</h2>
-          <p>Crafting Elegance, Moment by Moment</p>
-        </div>
-        <div id="services-container" class="row">
-          <!-- Services will be dynamically populated here -->
+          <a href="about.html" class="btn btn-outline-primary mt-2">Learn More</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Add JavaScript for dynamic service display -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const services = [
-          {
-            title: 'Customized Tailoring',
-            description: 'Perfect fit, personalized for you. Our expert tailors ensure every garment is crafted to complement your unique body shape and style preferences.',
-            icon: 'fa-scissors'
-          },
-          {
-            title: 'Intricate Embroidery',
-            description: 'Beauty in every thread. Our skilled artisans create stunning embroidery that transforms each piece into a work of art.',
-            icon: 'fa-paint-brush'
-          },
-          {
-            title: 'Bespoke Designs',
-            description: 'Unique styles, just the way you envision. We turn your fashion dreams into reality with custom-designed outfits.',
-            icon: 'fa-magic'
-          },
-          {
-            title: 'Quality Craftsmanship',
-            description: 'Passion in every stitch. We combine traditional techniques with modern design to create timeless, high-quality garments.',
-            icon: 'fa-hands-helping'
-          }
-        ];
-
-        const servicesContainer = document.getElementById('services-container');
-
-        function updateServices() {
-          // Clear previous services
-          servicesContainer.innerHTML = '';
-
-          // Select two random unique services
-          const selectedServices = [];
-          while (selectedServices.length < 2) {
-            const randomIndex = Math.floor(Math.random() * services.length);
-            const service = services[randomIndex];
-            if (!selectedServices.includes(service)) {
-              selectedServices.push(service);
-            }
-          }
-
-          // Display selected services
-          selectedServices.forEach(service => {
-            const serviceCard = document.createElement('div');
-            serviceCard.className = 'col-md-6';
-            serviceCard.innerHTML = `
-              <div class="offerings-card mb-4">
-                <h3><i class="fas ${service.icon} text-primary mr-3"></i>${service.title}</h3>
-                <p>${service.description}</p>
-              </div>
-            `;
-            servicesContainer.appendChild(serviceCard);
-          });
-        }
-
-        // Initial update
-        updateServices();
-
-        // Update services every 5 seconds
-        setInterval(updateServices, 5000);
-      });
-    </script>
-
-    <!-- Services Section -->
-    <section class="services_section layout_padding">
-      <div class="container">
-        <div class="heading_container text-center mb-5">
-          <h2 class="section-title">Our Services</h2>
-          <p class="section-subtitle">Elevating Your Style with Personalized Fashion Solutions</p>
+  <!-- Services Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Our <span>Services</span></h2>
+        <p class="section-subtitle">Elevating Your Style with Personalized Fashion Solutions</p>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-tshirt"></i>
+            </div>
+            <h3>Custom Tailoring</h3>
+            <p>Bespoke designs crafted to your unique measurements and style preferences with meticulous attention to detail.</p>
+            <a href="collection.html" class="btn btn-sm btn-outline-primary mt-3">Explore</a>
+          </div>
         </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="service-card">
-              <div class="service-icon">
-                <i class="fas fa-tshirt"></i>
-              </div>
-              <h3>Custom Tailoring</h3>
-              <p>Bespoke designs crafted to your unique measurements and style preferences.</p>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-palette"></i>
+            </div>
+            <h3>Style Consultation</h3>
+            <p>Personal styling advice to help you discover and express your individual aesthetic with confidence.</p>
+            <a href="contact.html" class="btn btn-sm btn-outline-primary mt-3">Book Now</a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-shopping-bag"></i>
+            </div>
+            <h3>Wardrobe Curation</h3>
+            <p>Expert selection of pieces that complement your lifestyle and personal brand for every occasion.</p>
+            <a href="collection.html" class="btn btn-sm btn-outline-primary mt-3">Discover</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collections Section -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Featured <span>Collections</span></h2>
+        <p class="section-subtitle">Curated Designs for the Modern Woman</p>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="collection-card">
+            <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Spring Couture Collection" class="img-fluid collection-img">
+            <div class="collection-overlay">
+              <h3>Spring Couture</h3>
+              <p>Soft pastels and delicate embroideries that celebrate the season of renewal</p>
+              <a href="collection.html" class="btn btn-outline-light">View Collection</a>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="service-card">
-              <div class="service-icon">
-                <i class="fas fa-palette"></i>
-              </div>
-              <h3>Style Consultation</h3>
-              <p>Personal styling advice to help you discover and express your individual aesthetic.</p>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="collection-card">
+            <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Summer Breeze Collection" class="img-fluid collection-img">
+            <div class="collection-overlay">
+              <h3>Summer Breeze</h3>
+              <p>Vibrant colors and lightweight fabrics perfect for warm days and cool evenings</p>
+              <a href="collection.html" class="btn btn-outline-light">View Collection</a>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="service-card">
-              <div class="service-icon">
-                <i class="fas fa-shopping-bag"></i>
-              </div>
-              <h3>Wardrobe Curation</h3>
-              <p>Expert selection of pieces that complement your lifestyle and personal brand.</p>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="collection-card">
+            <img src="https://images.unsplash.com/photo-1554412933-514a83d2f3c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" alt="Festive Elegance Collection" class="img-fluid collection-img">
+            <div class="collection-overlay">
+              <h3>Festive Elegance</h3>
+              <p>Rich textures and intricate designs for your most special occasions</p>
+              <a href="collection.html" class="btn btn-outline-light">View Collection</a>
             </div>
           </div>
         </div>
       </div>
-    </section>
+      <div class="text-center mt-4">
+        <a href="collection.html" class="btn btn-primary">View All Collections</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Collection Section -->
-    <section class="collection_section layout_padding">
-      <div class="container">
-        <div class="heading_container text-center mb-5">
-          <h2 class="section-title">Exclusive Collections</h2>
-          <p class="section-subtitle">Curated Designs for the Modern Woman</p>
+  <!-- Testimonials Section -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Client <span>Testimonials</span></h2>
+        <p class="section-subtitle">What Our Clients Say About Us</p>
+      </div>
+      <div class="owl-carousel owl-theme">
+        <div class="testimonial-card" data-aos="fade-up">
+          <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Priya Sharma" class="testimonial-img">
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>"The tailoring at FemStudio is exceptional. My custom salwar suit fit perfectly and the fabric quality was outstanding. Will definitely return for more outfits!"</p>
+          <h5>Priya Sharma</h5>
+          <small>Hyderabad</small>
         </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="collection-card">
-              <img src="images/Product-1.png" alt="Spring Couture Collection" class="img-fluid">
-              <div class="collection-overlay">
-                <h3>Spring Couture</h3>
-                <p>Soft pastels and delicate embroideries</p>
-                <a href="#" class="btn btn-outline-light">View Collection</a>
-              </div>
-            </div>
+        <div class="testimonial-card" data-aos="fade-up">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ananya Patel" class="testimonial-img">
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
           </div>
-          <div class="col-md-4">
-            <div class="collection-card">
-              <img src="images/product-2.png" alt="Summer Breeze Collection" class="img-fluid">
-              <div class="collection-overlay">
-                <h3>Summer Breeze</h3>
-                <p>Vibrant colors and lightweight fabrics</p>
-                <a href="#" class="btn btn-outline-light">View Collection</a>
-              </div>
-            </div>
+          <p>"I bought a ready-made party wear suit from FemStudio and received so many compliments! The stitching and embroidery work is exquisite."</p>
+          <h5>Ananya Patel</h5>
+          <small>Bangalore</small>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Meera Khanna" class="testimonial-img">
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
           </div>
-          <div class="col-md-4">
-            <div class="collection-card">
-              <img src="images/Product-1.png" alt="Festive Elegance Collection" class="img-fluid">
-              <div class="collection-overlay">
-                <h3>Festive Elegance</h3>
-                <p>Rich textures and intricate designs</p>
-                <a href="#" class="btn btn-outline-light">View Collection</a>
-              </div>
-            </div>
+          <p>"The designers at FemStudio understood exactly what I wanted for my wedding blouses. Their attention to detail is remarkable. Highly recommended!"</p>
+          <h5>Meera Khanna</h5>
+          <small>Mumbai</small>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up">
+          <img src="https://randomuser.me/api/portraits/women/75.jpg" alt="Divya Reddy" class="testimonial-img">
+          <div class="testimonial-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>"FemStudio transformed my vision into reality. The custom lehenga they created for me was beyond my expectations. Perfect fit and stunning craftsmanship!"</p>
+          <h5>Divya Reddy</h5>
+          <small>Delhi</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center" data-aos="zoom-in">
+          <h2 class="mb-4">Ready to Elevate Your Wardrobe?</h2>
+          <p class="lead mb-5">Book a consultation with our design experts and discover how we can bring your fashion vision to life</p>
+          <div class="d-flex justify-content-center gap-3">
+            <a href="contact.html" class="btn btn-primary btn-lg">Book Consultation</a>
+            <a href="tel:+918382818025" class="btn btn-outline-light btn-lg"><i class="fas fa-phone me-2"></i> Call Us</a>
           </div>
         </div>
       </div>
-    </section>
-</div>
+    </div>
+  </section>
 
-  <!-- end food section -->
-
-
-
-  <!-- end client section -->
-
-  <!-- footer section -->
-  <footer class="footer_section">
+  <!-- Footer -->
+  <footer class="footer">
     <div class="container">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-lg-4 mb-5 mb-lg-0">
           <div class="footer-about">
-            <img src="images/brandlogo.png" alt="FemStudio Logo" class="footer-logo mb-3">
-            <p>Modern Elegance in Every Stitch. Empowering women through fashion that tells a story.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="footer-links">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="menu.html">Collections</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="footer-contact">
-            <h4>Contact Us</h4>
-            <p><i class="fas fa-map-marker-alt"></i> 8-1-40/A/160, 7 Tombs Rd, beside Kazam Residency, Samatha Colony, Bentoubavdi, Samata Colony, Toli Chowki, Hyderabad, Telangana 500008</p>
-            <p><i class="fas fa-phone"></i> 8382818025</p>
-            <p><i class="fas fa-envelope"></i> hello@femstudio.com</p>
-            <div class="social-links mt-3">
+            <img src="images/brandlogo.png" alt="FemStudio Logo" class="footer-logo">
+            <p class="mt-3">Modern Elegance in Every Stitch. Empowering women through fashion that tells a story.</p>
+            <div class="social-links">
               <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
               <a href="https://www.instagram.com/ilovefemstudio/" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
               <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
@@ -424,89 +769,111 @@
             </div>
           </div>
         </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="collection.html">Collections</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div class="footer-links">
+            <h4>Collections</h4>
+            <ul>
+              <li><a href="collection.html">Tailoring</a></li>
+              <li><a href="collection.html">Ready-to-Wear</a></li>
+              <li><a href="collection.html">Bridal</a></li>
+              <li><a href="collection.html">Festive</a></li>
+              <li><a href="collection.html">Casual</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p><i class="fas fa-map-marker-alt"></i> 8-1-40/A/160, 7 Tombs Rd, beside Kazam Residency, Samatha Colony, Bentoubavdi, Samata Colony, Toli Chowki, Hyderabad, Telangana 500008</p>
+            <p><i class="fas fa-phone"></i> 8382818025</p>
+            <p><i class="fas fa-envelope"></i> hello@femstudio.com</p>
+            <p><i class="fas fa-clock"></i> Mon-Sat: 10AM - 8PM</p>
+          </div>
+        </div>
       </div>
-      <div class="footer-bottom text-center mt-4">
-        <p>&copy; <span id="displayYear"></span> FemStudio. All Rights Reserved. Crafted with <i class="fas fa-heart text-danger"></i> by FemStudio Team</p>
+      <div class="footer-bottom text-center">
+        <p class="mb-0">&copy; <span id="currentYear"></span> FemStudio. All Rights Reserved. Crafted with <i class="fas fa-heart text-danger"></i> by FemStudio Team</p>
       </div>
     </div>
   </footer>
-  <!-- footer section -->
 
-  <!-- jQery -->
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <!-- popper js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <!-- bootstrap js -->
-  <script src="js/bootstrap.js"></script>
-  <!-- owl slider -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <!-- isotope js -->
-  <script src="https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js"></script>
-  <!-- nice select -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
-  <!-- custom js -->
-  <script src="js/custom.js"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-  </script>
-  <!-- End Google Map -->
-
-  <!-- Custom scripts -->
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Owl Carousel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  
+  <!-- AOS Animation -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Custom Scripts -->
   <script>
-    $(document).ready(function() {
-      // Initialize Value Propositions Carousel
-      $('.value-proposition-carousel').owlCarousel({
+    // Initialize AOS animation
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+    
+    // Initialize Owl Carousel for testimonials
+    $(document).ready(function(){
+      $('.owl-carousel').owlCarousel({
         loop: true,
         margin: 20,
         nav: false,
         dots: true,
         autoplay: true,
-        autoplayTimeout: 3000,
+        autoplayTimeout: 5000,
         responsive: {
           0: {
             items: 1
           },
-          600: {
+          768: {
             items: 2
           },
-          1000: {
-            items: 3
-          }
-        }
-      });
-      // Initialize Unique Offerings Carousel
-      $('.unique-offerings-carousel').owlCarousel({
-        loop: true,
-        margin: 20,
-        nav: false,
-        dots: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        responsive: {
-          0: {
-            items: 1
-          },
-          600: {
-            items: 2
-          },
-          1000: {
+          992: {
             items: 3
           }
         }
       });
     });
-  </script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const yearElement = document.getElementById('displayYear');
-      const currentYear = new Date().getFullYear();
-      yearElement.textContent = currentYear;
+    
+    // Navbar scroll effect
+    $(window).scroll(function(){
+      if($(this).scrollTop() > 100) {
+        $('.navbar').addClass('scrolled');
+      } else {
+        $('.navbar').removeClass('scrolled');
+      }
+      
+      // Back to top button
+      if ($(this).scrollTop() > 300) {
+        $('.back-to-top').addClass('active');
+      } else {
+        $('.back-to-top').removeClass('active');
+      }
+    });
+    
+    // Back to top button click
+    $('.back-to-top').click(function(e) {
+      e.preventDefault();
+      $('html, body').animate({scrollTop: 0}, '300');
     });
   </script>
-
 </body>
-
 </html>
