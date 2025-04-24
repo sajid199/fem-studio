@@ -535,6 +535,63 @@
       }
     }
     
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      body {
+        overflow-x: hidden;
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .hero-section {
+        height: auto;
+        min-height: 60vh;
+        padding: 100px 0;
+      }
+
+      .section {
+        padding: 50px 0;
+      }
+
+      .navbar-brand .logo-img {
+        max-height: 40px;
+      }
+
+      .brand-text h1 {
+        font-size: 1.4rem;
+      }
+
+      .brand-text h5 {
+        font-size: 0.7rem;
+      }
+
+      .nav-link {
+        margin: 5px 0;
+        font-size: 0.9rem;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .section-subtitle {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Ensure no horizontal scrolling on mobile */
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    
     /* Animation Classes */
     .animate-fade-in {
       animation: fadeIn 1s ease-in-out;
@@ -884,7 +941,7 @@
         </div>
       </div>
       <div class="footer-bottom text-center">
-        <p class="mb-0">© <span id="currentYear"></span> FemStudio. All Rights Reserved. Crafted with <i class="fas fa-heart text-danger"></i> by FemStudio Team</p>
+        <p class="mb-0"> 2023 FemStudio. All Rights Reserved. Crafted with <i class="fas fa-heart text-danger"></i> by FemStudio Team</p>
       </div>
     </div>
   </footer>
